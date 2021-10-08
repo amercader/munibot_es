@@ -1,4 +1,4 @@
-# Commune Bot
+# Munibot España / Catalunya
 
 Two friendly Twitter bots built with [Munibot](https://github.com/amercader/munibot) that tweet aerial pictures of Spain's [municipalities](https://en.wikipedia.org/wiki/Municipalities_of_Spain).
 
