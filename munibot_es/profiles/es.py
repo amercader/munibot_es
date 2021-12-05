@@ -76,7 +76,7 @@ class MuniBotEs(BaseProfile):
         data = db.execute(
             """
             SELECT nameunit, nameprov
-            FROM munis_esp
+            FROM es
             WHERE natcode = ?
             """,
             (id_,),
@@ -97,7 +97,7 @@ class MuniBotEs(BaseProfile):
         id_ = db.execute(
             """
             SELECT natcode
-            FROM munis_esp
+            FROM es
             WHERE tweet_es IS NULL
             ORDER BY RANDOM()
             LIMIT 1"""
@@ -112,7 +112,7 @@ class MuniBotEs(BaseProfile):
         data = db.execute(
             """
             SELECT lon, lat
-            FROM munis_esp
+            FROM es
             WHERE natcode = ?
             """,
             (id_,),
@@ -128,7 +128,7 @@ class MuniBotEs(BaseProfile):
 
         db.execute(
             """
-            UPDATE munis_esp
+            UPDATE es
             SET tweet_es = ?
             WHERE natcode = ?
             """,
