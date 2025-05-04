@@ -19,9 +19,9 @@ class MuniBotCat(MuniBotEs):
         bbox = self.extend_bbox(extent)
 
         wms_options = {
-            "url": "https://geoserveis.icgc.cat/icc_ortohistorica/wms/service",
-            "layer": "orto5m2016",
-            "version": "1.1.1",
+            "url": "https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms",
+            "layer": "ortofoto_color_vigent",
+            "version": "1.3.0",
             "crs": "EPSG:4258",
             "bbox": bbox,
         }
