@@ -35,7 +35,7 @@ class MuniBotCat(MuniBotEs):
         id_ = db.execute(
             """
             SELECT natcode
-            FROM munis_esp
+            FROM es
             WHERE tweet_cat IS NULL
                 AND codcomuni = '09'
             ORDER BY RANDOM()
@@ -51,7 +51,7 @@ class MuniBotCat(MuniBotEs):
         data = db.execute(
             """
             SELECT nameunit, namecomar
-            FROM munis_esp
+            FROM es
             WHERE natcode = ?
             """,
             (id_,),
@@ -71,7 +71,7 @@ class MuniBotCat(MuniBotEs):
 
         db.execute(
             """
-            UPDATE munis_esp
+            UPDATE es
             SET tweet_cat = ?
             WHERE natcode = ?
             """,
