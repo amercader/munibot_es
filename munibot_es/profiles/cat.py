@@ -16,9 +16,7 @@ class MuniBotCat(MuniBotEs):
 
     def get_base_image(self, extent):
 
-        bbox = (extent[1], extent[0], extent[3], extent[2])
-
-        bbox = self.extend_bbox(bbox)
+        bbox = self.extend_bbox(extent)
 
         wms_options = {
             "url": "https://geoserveis.icgc.cat/icc_ortohistorica/wms/service",
