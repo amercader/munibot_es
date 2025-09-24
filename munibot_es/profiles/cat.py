@@ -65,7 +65,7 @@ class MuniBotCat(MuniBotEs):
 
         return f"{name_muni} ({name_comarca})\n\n\n{wiki_link}"
 
-    def after_tweet(self, id_, status_id):
+    def after_post(self, id_, status_id):
 
         db = sqlite3.connect(config["profile:cat"]["db_path"])
 
