@@ -12,7 +12,7 @@ class MuniBotCat(MuniBotEs):
 
     desc = "Municipis Catalunya (Ortofoto ICGC)"
 
-    image_nodata_value = 255
+    image_nodata_value = 0
 
     def get_base_image(self, extent):
 
